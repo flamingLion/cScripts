@@ -27,6 +27,17 @@ const Page gamePages[] = {
 	//7 you get fired
 	//8 you apologise to your boss
 	//9 you quit your job
+	//10 you go to the office
+	//11 you take a shower
+	//12 you don't take a shower
+	//13 you apologise to the president
+	//14 you explain your day
+	//15 you quit your job to the president
+	//16 you run back home to shower
+	//17 you go in all smelly
+	//18 you clean up with the soap in the bathroom
+	//19 you speed to the office
+	//20 you quit over text
 
 	//0
 	{
@@ -117,6 +128,74 @@ const Page gamePages[] = {
 		"(1: Yes sir (go to the office), 2: Quit your job)\n\n",
 		2,
 		{10,9}
+	},
+	//9
+	{
+		"\nYou interupt your boss and tell him that you have decided\n"
+		"not to work for him anymore. He ends the call.\n\n"
+		"You have been fired\n"
+		"GAMEOVER\n\n",
+		0,
+		{}
+	},
+	//10
+	{
+		"\nYour boss ends the call and you put your phone in your\n"
+		"pocket. You need to get to the office as soon as possible.\n"
+		"Do you take a shower?\n\n"
+		"(1: yes, 2: no)\n\n",
+		2,
+		{11,12}
+	},
+	//11
+	{
+		"\nEven though you know your boss will be angrier, you rush\n"
+		"to your bathroom and take possibly the fastest shower you\n"
+		"have ever taken in only 2 minutes. You rush into your suit\n"
+		"and tie and grab everything you think you need. Then you\n"
+		"head to the office... When you arrive your boss rushes you\n"
+		"into meeting room 2 and tells you everything you need to\n"
+		"know for the meeting. It took you a moment to notice him,\n"
+		"but at the end of the large oval table, where the boss\n"
+		"normally sits, sat the president of the company! You weren't\n"
+		"really listening when your boss was briefing you on what\n"
+		"the meeting was about, so you ask one of your coworkers\n"
+		"sitting next to you. He says that it is about productivity\n"
+		"or something. Your heart stops. Then the president says,\n"
+		"where have you been Joe? This is the sort of thing that\n"
+		"caused me to bring this meeting to order, your unit is the\n"
+		"least productive unit in the entire company! And that needs\n"
+		"to change. So Joe, what do you have to say for yourself,\n"
+		"being late for possibly the most important meeting you\n"
+		"will ever attend with your work ethic?\n\n"
+		"(1: apologise, 2: explain what happened, 3: quit job)\n\n",
+		3,
+		{13,14,15}
+	},
+	//12
+	{
+		"\nIn a rush you forgot to take a shower, and when you\n"
+		"got to the office, you realize that you smell like the\n"
+		"snacks you were eating last night. What do you do?!\n\n"
+		"(1: run back home, 2: do nothing, 3: use the soap in the bathroom)\n\n",
+		3,
+		{16,17,18}
+	},
+	//13
+	{},
+	//14
+	{},
+	//15
+	{},
+	//16
+	{
+		"\nYou run back to your car and zoom back home.But\n"
+		"when you were leaving again your boss sends you a\n"
+		"text saying that you are fired if you don't get there\n"
+		"that minute! What do you do?\n\n"
+		"(1: speed to the office, 2: quit job)\n\n",
+		2,
+		{19,20}
 	}
 };
 
