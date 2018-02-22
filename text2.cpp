@@ -6,7 +6,19 @@ using namespace std;
 //////////////////////////////////////////////////////
 // Welcome to the code for Text Adventure 2 in c++! //
 //////////////////////////////////////////////////////
-
+//                                                  //
+// Script (main course of action):                  //
+// You have a bad day no matter what you do for the //
+// first day                                        //
+//                                                  //
+// you find a wierd pendant under your pillow when  //
+// you get home and a demon explains it is a pendant//
+// of bad luck.                                     //
+//                                                  //
+// you make a deal with the demon to destroy the    //
+// person that ruined your chances                  //
+//                                                  //
+//////////////////////////////////////////////////////
 struct Page{
     string      text;           // the text displayed to the user when they're on this page
 
@@ -17,27 +29,37 @@ struct Page{
 
 const Page gamePages[] = {
 	// Table of Contents
+
 	//0 menu
 	//1 tutorial
 	//2 tutorial 2
+
+	// Bad day
+
 	//3 game begin
-	//4 you get out of bed
-	//5 you stay in bed
-	//6 you pick up the call
-	//7 you get fired
-	//8 you apologise to your boss
-	//9 you quit your job
-	//10 you go to the office
-	//11 you take a shower
-	//12 you don't take a shower
-	//13 you apologise to the president
-	//14 you explain your day
-	//15 you quit your job to the president
-	//16 you run back home to shower
-	//17 you go in all smelly
-	//18 you clean up with the soap in the bathroom
-	//19 you speed to the office
-	//20 you quit over text
+	//4 get out of bed
+	//5 stay in bed
+	//6 pick up the call
+	//7 get fired
+	//8 apologise to your boss
+	//9 quit your job
+	//10 go to the office
+	//11 take a shower
+	//12 don't take a shower
+	//13 apologise to the president
+	//14 brush off the president
+	//15 quit your job to the president
+	//16 run back home to shower
+	//17 go in all smelly
+	//18 clean up with the soap in the bathroom
+	//19 speed to the office
+	//20 quit over text
+	//21 stay after the meeting
+	//22 argue with the president
+//~	//23 get fired for insubordination
+	//24 argue against firing
+//~	//25 go home humiliated
+	//26 go home smelly
 
 	//0
 	{
@@ -161,14 +183,14 @@ const Page gamePages[] = {
 		"really listening when your boss was briefing you on what\n"
 		"the meeting was about, so you ask one of your coworkers\n"
 		"sitting next to you. He says that it is about productivity\n"
-		"or something. Your heart stops. Then the president says,\n"
+		"or something. Your heart stops. Then the president asks,\n"
 		"where have you been Joe? This is the sort of thing that\n"
 		"caused me to bring this meeting to order, your unit is the\n"
 		"least productive unit in the entire company! And that needs\n"
 		"to change. So Joe, what do you have to say for yourself,\n"
 		"being late for possibly the most important meeting you\n"
 		"will ever attend with your work ethic?\n\n"
-		"(1: apologise, 2: explain what happened, 3: quit job)\n\n",
+		"(1: apologise, 2: brush it off, 3: quit job)\n\n",
 		3,
 		{13,14,15}
 	},
@@ -177,16 +199,42 @@ const Page gamePages[] = {
 		"\nIn a rush you forgot to take a shower, and when you\n"
 		"got to the office, you realize that you smell like the\n"
 		"snacks you were eating last night. What do you do?!\n\n"
-		"(1: run back home, 2: do nothing, 3: use the soap in the bathroom)\n\n",
+		"(1: run back home, 2: do nothing, 3: use the soap in the office bathroom)\n\n",
 		3,
 		{16,17,18}
 	},
 	//13
-	{},
+	{
+		"\nYou say sorry and you should have gotten here sooner.\n"
+		"He says Yes, you should have gotten here sooner, and I\n"
+		"expect all of you to remember what we talked about now.\n\n"
+		"Ok, meeting adjourned, all of you get back to work, everyone\n"
+		"exept you, Joe.\n\n"
+		"{1: stay in the meeting room, 2: argue}\n\n",
+		2,
+		{21,22}
+	},
 	//14
-	{},
+	{
+		"\nMe: Well it doesn't matter now, I am here, aren't I?\n"
+		"President: Insubordination. I am on edge, and you just\n"
+		"pushed me over. You are fired. No exeptions. Leave.\n\n"
+		"{1: leave, 2: argue}\n\n",
+		2,
+		{23,24}
+	},
 	//15
-	{},
+	{
+		"\nMe: Why are people always picking on me?! do I have a\n"
+		"target on my back? You know what, I quit this clown act.\n"
+		"President: With your childish aditude I am sure you won't\n"
+		"be missed. I didn't get a degree in elementary education.\n"
+		"Your coworkers laugh as you storm out of the room\n\n"
+		"{1: go home}\n\n",
+		1,
+		{25}
+		
+	},
 	//16
 	{
 		"\nYou run back to your car and zoom back home.But\n"
@@ -196,7 +244,70 @@ const Page gamePages[] = {
 		"(1: speed to the office, 2: quit job)\n\n",
 		2,
 		{19,20}
-	}
+	},
+	//17
+	{
+		"\nYou walk into the office building, your boss begins\n"
+		"to move you to the meeting room, but stops and takes a\n"
+		"deep breath through his nose, stopping halfway and almost\n"
+		"choking on his breath. Boss: You smell horrible! Jesus,\n"
+		"I am not going to let you in that room with the president\n"
+		"of the company smelling like that, consider yourself done.\n"
+		"The president of the company! Holy makerel, I need to do\n"
+		"something! And fast!\n\n"
+		"{1: use the soap from the office restroom to clean, 2: leave hopelessly}\n\n",
+		2,
+		{18,26}
+	},
+	//18
+	{
+		"\nYou rush into the office restroom, dodging your boss.\n"
+		"You are in such a rush that your hands slip, and you smear\n"
+		"soap on your outfit. What do you do!\n\n"
+		"{1: try to rub it off, 2: hope he won't notice}\n\n",
+		2,
+		{27,28}
+	},
+	//19
+	{
+	
+	},
+	//20
+	{
+	
+	},
+	//21
+        {
+
+        },
+	//22
+        {
+
+        },
+        //23
+        {
+
+        },
+        //24
+        {
+
+        },
+        //25
+        {
+
+        },
+        //26
+        {
+
+        },
+        //27
+        {
+
+        },
+        //28
+        {
+
+        }
 };
 
 int doPage(int page)
