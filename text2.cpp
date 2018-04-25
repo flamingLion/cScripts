@@ -34,7 +34,7 @@ const Page gamePages[] = {
 	//1 tutorial
 	//2 tutorial 2
 
-	// Bad day
+	// Bad day (//~ = end of day 1)
 
 	//3 game begin
 	//4 get out of bed
@@ -209,7 +209,7 @@ const Page gamePages[] = {
 		"He says Yes, you should have gotten here sooner, and I\n"
 		"expect all of you to remember what we talked about now.\n\n"
 		"Ok, meeting adjourned, all of you get back to work, everyone\n"
-		"exept you, Joe.\n\n"
+		"except you, Joe.\n\n"
 		"{1: stay in the meeting room, 2: argue}\n\n",
 		2,
 		{21,22}
@@ -263,14 +263,15 @@ const Page gamePages[] = {
 	{
 		"\nYou rush into the office restroom, dodging your boss.\n"
 		"You are in such a rush that your hands slip, and you smear\n"
-		"soap on your outfit. What do you do!\n\n"
+		"soap on your jacket. What do you do!\n\n"
 		"{1: try to rub it off, 2: hope he won't notice}\n\n",
 		2,
 		{27,28}
 	},
 	//19
 	{
-	
+		"\nYou decide that keeping your job is more important than\n"
+		"a traffic ticket, so you speed to work
 	},
 	//20
 	{
