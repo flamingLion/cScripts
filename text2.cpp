@@ -270,13 +270,23 @@ const Page gamePages[] = {
 	},
 	//19
 	{
-		"\nYou decide that keeping your job is more important than\n"
-		"a traffic ticket, so you speed to work
-	},
-	//20
-	{
-	
-	},
+                "\nYou decide that keeping your job is more important than\n"
+                "a traffic ticket, so you begin to speed to work, when you hear\n"
+                "the iconic sirens with flashing lights behind you.\n\n"
+                "{1: pull over, 2: run from the cops}\n\n",
+                2,
+                {29,30}
+        },
+        //20
+        {
+                "\nYou: Actually, I won't come to work. I don't want a job\n"
+                "that puts me through so much stress on such short notice. I\n"
+                "quit. Boss: Well by the looks of it, we didn't need you in the\n"
+                "first place. And this meeting has been planned for over a week.\n\n"
+                "GAMEOVER\n\n",
+                0,
+                {}
+        },
 	//21
         {
 
