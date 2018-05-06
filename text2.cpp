@@ -60,7 +60,9 @@ const Page gamePages[] = {
 	//24 argue against firing
 //~	//25 go home humiliated
 	//26 go home smelly
-
+	//31 continue talk with president
+	//32 tell president to kiss your ass (argue)
+//~	//33 
 	//0
 	{
 		"\nWelcome to Text Adventure 2!\n\n"
@@ -289,11 +291,19 @@ const Page gamePages[] = {
         },
 	//21
         {
-
+		"\nYou decide to play the smart card and stay to avoid more lashing.\n"
+		"So Joe, do you know why I have asked you to stay to talk?\n\n"
+		"{1: No, 2: argue}\n\n",
+		2,
+		{31,32}
         },
 	//22
         {
-
+		"\nYou leave the room with your middle finger pointed behind you, you\n"
+		"assume you have been fired, and continue your day, jobless\n\n"
+		"GAMEOVER\n\n",
+		0,
+		{}
         },
         //23
         {
