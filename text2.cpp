@@ -27,6 +27,10 @@ struct Page{
     int         nextpage[10];   // The next page to go to depending on which option the user selected.
 };
 
+// Walkthrough:
+// get through the first day without trying to get fired
+// etcetera (to be continued)
+
 const Page gamePages[] = {
 	// Table of Contents
 
@@ -58,11 +62,17 @@ const Page gamePages[] = {
 	//22 argue with the president
 //~	//23 get fired for insubordination
 	//24 argue against firing
-//~	//25 go home humiliated
-	//26 go home smelly
-	//31 continue talk with president
-	//32 tell president to kiss your ass (argue)
-//~	//33 
+//~	//25 go home smelly (leads to 32)
+	//26 try to rub soap off jacket
+	//27 hope boss won't notice soap on jacket
+	//28 pull over for cops
+	//29 gun it from cops
+	//30 continue talk with president
+	//31 tell president to kiss your ass (argue)
+//~~	//32 Go home hopelessly
+	//33 
+//~	//34 go home with soap stain (leads to 32)
+	 
 	//0
 	{
 		"\nWelcome to Text Adventure 2!\n\n"
@@ -203,7 +213,7 @@ const Page gamePages[] = {
 		"snacks you were eating last night. What do you do?!\n\n"
 		"(1: run back home, 2: do nothing, 3: use the soap in the office bathroom)\n\n",
 		3,
-		{16,17,18}
+		{16,17,35}
 	},
 	//13
 	{
@@ -212,7 +222,7 @@ const Page gamePages[] = {
 		"expect all of you to remember what we talked about now.\n\n"
 		"Ok, meeting adjourned, all of you get back to work, everyone\n"
 		"except you, Joe.\n\n"
-		"{1: stay in the meeting room, 2: argue}\n\n",
+		"(1: stay in the meeting room, 2: argue)\n\n",
 		2,
 		{21,22}
 	},
@@ -221,7 +231,7 @@ const Page gamePages[] = {
 		"\nMe: Well it doesn't matter now, I am here, aren't I?\n"
 		"President: Insubordination. I am on edge, and you just\n"
 		"pushed me over. You are fired. No exeptions. Leave.\n\n"
-		"{1: leave, 2: argue}\n\n",
+		"(1: leave, 2: argue)\n\n",
 		2,
 		{23,24}
 	},
@@ -232,9 +242,9 @@ const Page gamePages[] = {
 		"President: With your childish aditude I am sure you won't\n"
 		"be missed. I didn't get a degree in elementary education.\n"
 		"Your coworkers laugh as you storm out of the room\n\n"
-		"{1: go home}\n\n",
-		1,
-		{25}
+		"GAMEOVER\n\n",
+		0,
+		{}
 		
 	},
 	//16
@@ -257,27 +267,27 @@ const Page gamePages[] = {
 		"of the company smelling like that, consider yourself done.\n"
 		"The president of the company! Holy makerel, I need to do\n"
 		"something! And fast!\n\n"
-		"{1: use the soap from the office restroom to clean, 2: leave hopelessly}\n\n",
+		"(1: use the soap from the office restroom to clean, 2: leave hopelessly)\n\n",
 		2,
-		{18,26}
+		{18,25}
 	},
 	//18
 	{
 		"\nYou rush into the office restroom, dodging your boss.\n"
 		"You are in such a rush that your hands slip, and you smear\n"
 		"soap on your jacket. What do you do!\n\n"
-		"{1: try to rub it off, 2: hope he won't notice}\n\n",
+		"(1: try to rub it off, 2: hope he won't notice)\n\n",
 		2,
-		{27,28}
+		{26,27}
 	},
 	//19
 	{
                 "\nYou decide that keeping your job is more important than\n"
                 "a traffic ticket, so you begin to speed to work, when you hear\n"
                 "the iconic sirens with flashing lights behind you.\n\n"
-                "{1: pull over, 2: run from the cops}\n\n",
+                "(1: pull over, 2: gun it from the cops)\n\n",
                 2,
-                {29,30}
+                {28,29}
         },
         //20
         {
@@ -293,9 +303,9 @@ const Page gamePages[] = {
         {
 		"\nYou decide to play the smart card and stay to avoid more lashing.\n"
 		"So Joe, do you know why I have asked you to stay to talk?\n\n"
-		"{1: No, 2: argue}\n\n",
+		"(1: No, 2: argue)\n\n",
 		2,
-		{31,32}
+		{30,31}
         },
 	//22
         {
@@ -307,28 +317,107 @@ const Page gamePages[] = {
         },
         //23
         {
-
+		"\nYou walk out of the room somberly yet loathingly. Stupid president.\n\n"
+		"GAMEOVER\n\n",
+		0,
+		{}
         },
         //24
         {
-
+		"\nYou: All I did was try to say that casually, I shouldn't be fired\n"
+		"for that! President: I do not care what you think you did, this is a\n"
+		"place of business, not a backalley street, and I should expect you to\n"
+		"act like it. Leave. Now.\n\n"
+		"GAMEOVER\n\n",
+		0,
+		{}
         },
         //25
         {
-
+		"\nWhatever, you think to yourself. If they need to be so picky, they\n"
+		"should choose someone else to be picky towards. I don't need this job.\n"
+		"Then you remember that you have rent to pay, and drive away full of\n"
+		"sorrow...\n\n"
+		"(1: go home, 2: go to the bar)\n\n",
+		2,
+		{32,33}
+		
         },
         //26
         {
-
+		"\nYou try to run the soap off your jacket, but it only smears it even\n"
+		"more! He's bound to notice it now...\n\n"
+		"(1: hope he won't notice, 2: go home)\n\n",
+		2,
+		{27,34}
         },
         //27
         {
-
+		"\nYou run back out to your boss and ask, is this better? He says: Maybe\n"
+		"a little bit, but what is the white stain on your jacket? I cannot let\n"
+		"you in there looking like that. The people I chose for this meeting from\n"
+                "this unit I chose specifically because I thought they could represent us\n"
+                "well, looks like you have, sadly. Just leave, I will not let you in.\n\n"
+                "GAMEOVER\n\n",
+                0,
+                {}
         },
         //28
         {
 
-        }
+        },
+	//29
+	{
+	
+	},
+	//30
+	{
+	
+	},
+	//31
+	{
+	
+	},
+	//32
+	{
+	
+	},
+	//33
+	{
+	
+	},
+	//34
+	{
+	
+	},
+	//35
+	{
+		"\nYou rush into the office restroom, dodging your boss.\n"
+                "You are in such a rush that your hands slip, and you smear\n"
+                "soap on your jacket. What do you do!\n\n"
+                "(1: try to rub it off, 2: hope he won't notice)\n\n",
+                2,
+		{36,37}
+	},
+	//36
+	{
+	        "\nYou try to run the soap off your jacket, but it only smears it even\n"
+                "more! He's bound to notice it now...\n\n"
+                "(1: hope he won't notice, 2: go home)\n\n",
+                2,
+		{37,34}
+	},
+	//37
+	{
+	        "\nYou run back out to your boss and ask, do I smell ok? He says: No, not\n"
+                "really at all, but what is the white stain on your jacket? I cannot let\n"
+                "you in there looking like that. The people I chose for this meeting from\n"
+		"this unit I chose specifically because I thought they could represent us\n"
+		"well, looks like you have, sadly. Just leave, I will not let you in.\n\n"
+                "GAMEOVER\n\n",
+                0,
+                {}
+	}
 };
 
 int doPage(int page)
