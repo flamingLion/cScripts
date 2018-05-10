@@ -68,7 +68,7 @@ const Page gamePages[] = {
 	//28 pull over for cops
 	//29 gun it from cops
 	//30 continue talk with president
-	//31 tell president to kiss your ass (argue)
+//~	//31 tell president to kiss your ass (argue) (leads to 32)
 //~~	//32 Go home hopelessly
 	//33 go to the bar 
 //~	//34 go home with soap stain (leads to 32)
@@ -78,6 +78,8 @@ const Page gamePages[] = {
 //~	//38 give thug your money (leads to 32)
 	//39 fight thug
 	//40 Continue to work (alternate for 11)
+	//41 argue about being fired by president
+//~	//42 pack up your things
 
 	//0
 	{
@@ -342,7 +344,7 @@ const Page gamePages[] = {
         {
 		"\nWhatever, you think to yourself. If they need to be so picky, they\n"
 		"should choose someone else to be picky towards. I don't need this job.\n"
-		"Then you remember that you have rent to pay, and drive away full of\n"
+		"Then you remember that you have rent to pay, and walk to your car full of\n"
 		"sorrow...\n\n"
 		"(1: go home, 2: go to the bar)\n\n",
 		2,
@@ -391,15 +393,28 @@ const Page gamePages[] = {
 	},
 	//30
 	{
-	
+		"\nYou: No sir, I do not. President: Well I'll tell you then. The previous\n"
+		"meeting was about group productivity. I want to talk to you one on one\n"
+		"though. This can't end well you think to yourself. You are the least\n"
+		"productive employee in the company, and you are constantly getting into\n"
+		"trouble with your coworkers. I am afraid I have to fire you.\n\n"
+		"(1: go home 2: argue)\n\n",
+		2,
+		{25,41}
 	},
 	//31
 	{
-	
+		"\nYes, I do believe you wanted to talk to me about kissing my ass? Am I\n"
+		"corrrect? President: IF YOU DON'T LEAVE THIS BUILDING THIS INSTANT I WILL\n"
+		"SUE YOU, YOU MORONIC SON OF A... he trailed off... I am not going to lose\n"
+		"my professionalism over this. But I meant what I said. Leave now.\n\n"
+		"(1: go home)\n\n",
+		1,
+		{32}
 	},
 	//32
 	{
-	
+		"\nYou enter your car, and begin the sad drive home. 
 	},
 	//33
 	{
@@ -447,7 +462,11 @@ const Page gamePages[] = {
 	},
 	//38
 	{
-	
+		"\nYou give the thug your money and he runs away. You decide you are just\n"
+		"going to go home...\n\n"
+		"(1: go home)\n\n",
+		1,
+		{32}
 	},
 	//39
 	{
@@ -478,6 +497,23 @@ const Page gamePages[] = {
                 "(1: apologise, 2: brush it off, 3: quit job)\n\n",
                 3,
                 {13,14,15}
+	},
+	//41
+	{
+		"\nYou: Hey! I shouldn't be fired just because I am less productive,\n"
+		"Please give me a second chance! President: My desision is final.\n"
+		"Pack your things and leave.\n\n"
+		"(1: go home)\n\n",
+		1,
+		{42}
+	},
+	//42
+	{
+		"\nYou go to your cubicle, pack your things in a box, and walk to your\n"
+		"car...\n\n"
+		"(1: go home 2: go to the bar)\n\n",
+		2,
+		{32,33}
 	}
 };
 
