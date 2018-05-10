@@ -70,9 +70,15 @@ const Page gamePages[] = {
 	//30 continue talk with president
 	//31 tell president to kiss your ass (argue)
 //~~	//32 Go home hopelessly
-	//33 
+	//33 go to the bar 
 //~	//34 go home with soap stain (leads to 32)
-	 
+	//35 use soap in office bathroom (alternate)
+	//36 try to rub soap off jacket (alternate
+	//37 hope boss won't notice soap on jacket (alternate)
+//~	//38 give thug your money (leads to 32)
+	//39 fight thug
+	//40 Continue to work (alternate for 11)
+
 	//0
 	{
 		"\nWelcome to Text Adventure 2!\n\n"
@@ -358,17 +364,30 @@ const Page gamePages[] = {
 		"you in there looking like that. The people I chose for this meeting from\n"
                 "this unit I chose specifically because I thought they could represent us\n"
                 "well, looks like you have, sadly. Just leave, I will not let you in.\n\n"
-                "GAMEOVER\n\n",
-                0,
-                {}
+                "(1: go home)\n\n",
+                1,
+                {34}
         },
         //28
         {
-
+		"\nYou pull over onto the side of the road, and watch as the cops drive\n"
+		"past you! *Phew*.\n\n"
+		"(1: continue to work)\n\n",
+		1,
+		{40}
         },
 	//29
 	{
-	
+		"\nYou speed up even faster, and you see the cops behind you doing the\n"
+		"same. Eventually, you reach your exit, to see it blocked off... so you\n"
+		"continue down the highway, making sure to keep ahead of the cops, when\n"
+		"you see more flashing lights up ahead! along with police and spike strips!\n"
+		"You stop before you hit the spike strips, and you are imediatly surrounded\n"
+		"by police officers. They take you out of your car, arrest you, and you\n"
+		"go to jail...\n\n"
+		"GAMEOVER\n\n",
+		0,
+		{}
 	},
 	//30
 	{
@@ -384,11 +403,19 @@ const Page gamePages[] = {
 	},
 	//33
 	{
-	
+		"\nYou leave the building, enter your car, and decide you will go to the\n"
+		"local bar to lay off some steam. When you get there, though, you are stopped\n"
+		"in the doorway by a thug, asking for your money with a knife to your throat!\n\n"
+		"(1: give him your money 2: fight the thug)\n\n",
+		2,
+		{38,39}
 	},
 	//34
 	{
-	
+		"\nYou exit the building slumped and sad...\n\n"
+		"(1: enter your car)\n\n",
+		1,
+		{32}
 	},
 	//35
 	{
@@ -414,9 +441,43 @@ const Page gamePages[] = {
                 "you in there looking like that. The people I chose for this meeting from\n"
 		"this unit I chose specifically because I thought they could represent us\n"
 		"well, looks like you have, sadly. Just leave, I will not let you in.\n\n"
-                "GAMEOVER\n\n",
-                0,
-                {}
+                "(1: go home)\n\n",
+                1,
+                {34}
+	},
+	//38
+	{
+	
+	},
+	//39
+	{
+		"\nYou act like you are pulling out your wallet, and punch the thug in the\n"
+		"face! But he recovered quickly, and you couldn't do anything from that\n"
+		"point on...\n\n"
+		"GAMEOVER\n\n",
+		0,
+		{}
+	},
+	//40
+	{
+		"\nWhen you arrive, your boss rushes you\n"
+                "into meeting room 2 and tells you everything you need to\n"
+                "know for the meeting. It took you a moment to notice him,\n"
+                "but at the end of the large oval table, where the boss\n"
+                "normally sits, sat the president of the company! You weren't\n"
+                "really listening when your boss was briefing you on what\n"
+                "the meeting was about, so you ask one of your coworkers\n"
+                "sitting next to you. He says that it is about productivity\n"
+                "or something. Your heart stops. Then the president asks,\n"
+                "where have you been Joe? This is the sort of thing that\n"
+                "caused me to bring this meeting to order, your unit is the\n"
+                "least productive unit in the entire company! And that needs\n"
+                "to change. So Joe, what do you have to say for yourself,\n"
+                "being late for possibly the most important meeting you\n"
+                "will ever attend with your work ethic?\n\n"
+                "(1: apologise, 2: brush it off, 3: quit job)\n\n",
+                3,
+                {13,14,15}
 	}
 };
 
