@@ -30,6 +30,7 @@ struct Page{
 // Walkthrough:
 // get through the first day without trying to get fired
 // make deal with demon
+// do other things
 
 const Page gamePages[] = {
 	// Table of Contents
