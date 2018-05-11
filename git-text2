@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sudo git add text2.cpp
+sudo git add text2
+sudo git commit -m 'editzzz'
+
+echo "Added text2 and text2.cpp, ready for git push"
