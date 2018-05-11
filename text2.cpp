@@ -80,7 +80,17 @@ const Page gamePages[] = {
 	//40 Continue to work (alternate for 11)
 	//41 argue about being fired by president
 //~	//42 pack up your things
+	
+	// Home after bad day
+	// 32 included here
 
+	//43 take a nap and discover pendant
+	//44 look at what to eat
+	//45 drink milk
+	//46 make omlet
+	//47 eat sandwich
+	//48 eat pizza
+	
 	//0
 	{
 		"\nWelcome to Text Adventure 2!\n\n"
@@ -414,7 +424,11 @@ const Page gamePages[] = {
 	},
 	//32
 	{
-		"\nYou enter your car, and begin the sad drive home. 
+		"\nYou enter your car, and begin the sad drive home. When you get home, you\n"
+		"feel tired, maybe you should take a nap...\n\n"
+		"(1: take a nap 2: get something to eat)\n\n",
+		2,
+		{43,44}
 	},
 	//33
 	{
@@ -514,6 +528,100 @@ const Page gamePages[] = {
 		"(1: go home 2: go to the bar)\n\n",
 		2,
 		{32,33}
+	},
+	//43
+	{
+		"\nYou fall back on your bed, banging your head on the headboard\n"
+		"in the process, and pick up your pillow to adjust it, when you\n"
+		"feel something cold ant metal under your pillow... You take it\n"
+		"out from under your pillow, and it looks like... A necklace?\n"
+		"An amulet? You aren't sure, but almost immediatly, you see a\n"
+		"huge dark and red cloud forming at the edge of our bed, and\n"
+		"a figure begins to slowly take shape from the cloud. once it is\n"
+		"finished. It looks like... A demon!?! Demon: Hello Joe, nice to\n"
+		"finally meet you. I am Hnikkarr. And yes, I am a demon. So now\n"
+		"that we have that sortened out, why don't we talk about that\n"
+		"pendant of yours. You: HOLY SHIT A FXZKING DEMON DON'T KILL ME,\n"
+		"PLEASE!!! Hnikkarr: HAHAHAHA! I don't want to kill you... I\n"
+		"merely want to talk to you about that pendant in your hands\n"
+		"right now...\n\n"
+		"(1: Trust the demon 2: don't trust him!)\n\n",
+		2,
+		{49,50}
+	},
+	//44
+	{
+		"\nYou look in your refrigerator and see milk, eggs, a sandwich,\n"
+		"and a slice of pizza.\n\n"
+		"(1: drink milk 2: make omlet with eggs and milk 3: eat sandwich\n"
+		"4: eat pizza)\n\n",
+		4,
+		{45,46,47,48}
+	},
+	//45
+	{
+		"\nYou take a big gulp of milk right out of the jug, asperate half\n"
+		"of it, almost die, and decide that that is enough for you\n\n"
+		"(1: take a nap)\n\n",
+		1,
+		{43}
+	},
+	//46
+	{
+		"\nYou take out the milk and eggs, and begin to make an omlet.\n"
+		"First you drop all the eggshells in the mixture, add too much\n"
+		"milk, making it runny. And then you burn it to a crisp trying to\n"
+		"cook it. You have loast your appitite after that.\n\n"
+		"(1: take a nap)\n\n",
+		1,
+		{43}
+	},
+	//47
+	{
+		"\nYou take out the sandwich, find that the previously hidden side\n"
+		"is actually covered with stinky mold, and lose your appitite.\n\n"
+		"(1: take a nap)\n\n",
+		1,
+		{43}
+	},
+	//48
+	{
+		"\nThe piece of pizza looks old, but you trust it, so you eat it\n"
+		"Just minutes later, your stomach feels like it is doing a backflip,\n"
+		"and you puke all over your couch. After a long messy clean up, you\n"
+		"feel exhausted and tired at the same time\n\n"
+		"(1: take a nap)\n\n",
+		1,
+		{43}
+	},
+	//49
+	{
+		"\nYou: Ok, fine. I trust you... For now... What do you want with me,\n"
+		"and what is so special about this pendant... Hnikkarr: I don't care\n"
+		"much about you... I just want that pendant. And to answer your\n"
+		"second question, that is a pendant of bad luck. It curses anyone\n"
+		"who sleeps near it for one night with horrible, disgusting luck for\n"
+		"approximatly 13 hours. You: Why do you want it, and why was it under\n"
+		"my pillow! Hnikkarr: Aren't you full of questions... I want it to\n"
+		"give me more power, and my guess is someone or something put it\n"
+		"underneath your pillow. You: Why would someone want to give me bad\n"
+		"luck!? Hnikkarr: Beats me, could be any number of reasons. But I\n"
+		"don't care why. Just give me the pendant. You: Ok, a couple more\n"
+		"questions. Why do you want more power if you are already a demon?\n"
+		"Hnikkarr: Us demons are always searching to be the strongest...\n"
+		"That rare pendant would give me a huge surge of power. I would\n"
+		"easily be the strongest demon if I had it. You: Ok, that makes\n"
+		"sense. But why don't you just take the pendant from me? Hnikkarr:\n"
+		"Demons can only harm another being if we are contracted to do so.\n"
+		"You: Yes... I want to know who put this pendant under my pillow,\n"
+		"ruining my life and costing me my job. And you desperatly want\n"
+		"this pendant... If I made a deal with you, to give you the\n"
+		"pendant in return for helping me kill the person that ruined my\n"
+		"life... Hnikkarr: I am perfectly fine with helping you kill anyone\n"
+		"you want. As long as I get that pendant. You: So it is a deal.\n\n"
+		"(1: shake Hnikkarr's hand 2: do not trust him!!)\n\n",
+		2,
+		{51,52}
 	}
 };
 
