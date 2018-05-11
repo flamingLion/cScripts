@@ -91,6 +91,10 @@ const Page gamePages[] = {
 	//46 make omlet
 	//47 eat sandwich
 	//48 eat pizza
+	//49 trust demon
+	//50 don't trust demon 1
+	//51 shake demon's hand
+	//52 don't trust demon 2
 	
 	//0
 	{
