@@ -623,11 +623,56 @@ const Page gamePages[] = {
 		"this pendant... If I made a deal with you, to give you the\n"
 		"pendant in return for helping me kill the person that ruined my\n"
 		"life... Hnikkarr: I am perfectly fine with helping you kill anyone\n"
-		"you want. As long as I get that pendant. You: So it is a deal.\n\n"
-		"(1: shake Hnikkarr's hand 2: do not trust him!!)\n\n",
+		"you want. As long as I get that pendant.\n\n"
+		"(1: make the deal 2: do not trust him!!)\n\n",
 		2,
 		{51,52}
-	}
+	},
+	//50
+	{
+		"\nYou: Demons hurt people, no way can I trust you! Hnikkarr:\n"
+		"Didn't I just say I don't want to kill you? Plus, I am not\n"
+		"currently contracted to kill anyone, and that is the only way\n"
+		"I am able to harm another being, with the intent to kill or not.\n\n"
+		"(1: trust him for now 2: still don't trust him)\n\n",
+		2,
+		{49,53}
+	},
+	//51	
+	{
+		"You: So it is a deal. Do I shake your hand or something? Hnikkar:\n"
+		"No, just sign this contract. *A contract and a fountain pen\n"
+		"materialize in front of you* You: Give me a second, I am going\n"
+		"to read this first. Hnikkarr: No need, I'll give you a summary.\n"
+		"You give me your soul, and the pendant. And I will help you kill\n"
+		"a person of your choosing. You: MY SOUL! Can't the pendant be\n"
+		"enough!? Hnikkarr: Not really, I will become the most powerful\n"
+		"demon, but demons live on souls. So if I took this deal without\n"
+		"taking your soul, I would probably die from lack of human souls\n"
+		"before your guy even died. You: Well, wouldn't it be pointless\n"
+		"if I got revenge only to be dead, too? Hnikkarr: You will still\n"
+		"be alive, you will just be an empty vessel without feelings.\n\n"
+		"(1: take the deal 2: don't take the deal)\n\n",
+		2,
+		{54,55}
+	},
+	//52
+        {
+
+        },
+        //53
+        {
+		"\nYou: I still don't trust you, demons lie, now leave my appartment\n"
+		"now! Hnikkarr: This was like, the entire plot of your adventure...\n"
+		"Welp, guess not anymore, Hnikkar, out.\n\n"
+		"GAMEOVER\n\n",
+		0,
+		{}
+        },
+        //54
+        {
+
+        }
 };
 
 int doPage(int page)
