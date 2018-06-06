@@ -19,6 +19,8 @@ int main() {
                 std::cout << "The lights go out..." << std::endl << "*PING*" << std::endl << "The lights come back on, and jasper is dead" << std::endl;
         } else if (weapon == "nuke") {
                 std::cout << "All you hear are the radiation sirens coming from above... *BBBBBOOOOOOMMMMM* right on jasper..." << std::endl;
+	} else if (weapon == "penis") {
+		std::cout << "*thump* *thump* *thump*" << std::endl << "REEEEEEEE" << std::endl << "Baby jasper on the way" << std::endl;
 	} else {
 		std::cout << "Please re-run the script and choose a weapon" << std::endl;
 	}
