@@ -18,10 +18,19 @@ using namespace std;
 // you make a deal with the demon to destroy the    //
 // person that ruined your chances                  //
 //                                                  //
-// person is ex gf who thinks it was your fault     //
-// it didn't work out                               //
-//                                                  //
 //////////////////////////////////////////////////////
+
+/*
+
+Ideas:
+
+1. person is ex gf who thinks it was your fault it didn't work out (makes u unlucky to show how lucky u were to have her) (too cliche/cheesy?)
+2. person is magic wizard who is just mean to everyone (disney)
+3. person is demon who is bored and wanted something to do (made up rules he told u)
+4. person is demon who used to be a person somehow
+
+*/
+
 struct Page{
     string      text;           // the text displayed to the user when they're on this page
 
