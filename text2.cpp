@@ -18,6 +18,9 @@ using namespace std;
 // you make a deal with the demon to destroy the    //
 // person that ruined your chances                  //
 //                                                  //
+// person is ex gf who thinks it was your fault     //
+// it didn't work out                               //
+//                                                  //
 //////////////////////////////////////////////////////
 struct Page{
     string      text;           // the text displayed to the user when they're on this page
@@ -93,9 +96,12 @@ const Page gamePages[] = {
 	//48 eat pizza
 	//49 trust demon
 	//50 don't trust demon 1
-	//51 shake demon's hand
+	//51 ask deal
 	//52 don't trust demon 2
-	
+	//53 don't trust demon 3
+	//54 take deal
+	//55 don't take deal
+
 	//0
 	{
 		"\nWelcome to Text Adventure 2!\n\n"
@@ -658,7 +664,15 @@ const Page gamePages[] = {
 	},
 	//52
         {
-
+		"\n You: You only want the pendant, I won't trust you. You will\n"
+		"probably just try to kill me and take the pendant if it is so\n"
+		"powerful. You haven't denied that demons lie, and you probably don't\n"
+		"care about double crossing, either. Leave my appartment, now!\n"
+		"Hnikkar: This was like, the entire plot of your adventure...\n"
+                "Welp, guess not anymore, Hnikkar, out.\n\n"
+		"GAMEOVER\n\n",
+                0,
+                {}
         },
         //53
         {
@@ -671,8 +685,40 @@ const Page gamePages[] = {
         },
         //54
         {
+		"\nYou: Well, my life is already ruined, who needs feelings. *You\n"
+		"sign your name on the contract and it disappears* You: Ummm... I\n"
+		"think I still have my soul. Hnikkarr: Yes, that comes after my end\n"
+		"of the deal, sadly. You: So, Let's get this guy then. Where should\n"
+		"we start? Hnikkarr: well, maybe search for clues. You: Wait, can't\n"
+		"you just teleport? Like you did to get to me? Can't you just teleport\n"
+		"to the person and kill them? Hnikkarr: I need to know what I am\n"
+		"\"teleporting\" to, moron. You: Oh, right. Clues then.\n"
+		"Where should I search?\n\n"
+		"(1: Under my pillow 2: around bed 3: somewhere else...)\n\n",
+		3,
+		{56,57,58}
+        },
+	//55
+	{
+		
+	},
+	//56
+	{
 
-        }
+        },
+        //57
+        {
+
+        },
+        //58
+        {
+
+        },
+        //59
+        {
+
+        },
+        //60
 };
 
 int doPage(int page)
