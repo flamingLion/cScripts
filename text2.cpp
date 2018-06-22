@@ -110,6 +110,8 @@ const Page gamePages[] = {
 	//53 don't trust demon 3
 	//54 take deal
 	//55 don't take deal
+	//56 search for clues under pillow
+	//57 search for clues around bed
 
 	//0
 	{
@@ -187,9 +189,10 @@ const Page gamePages[] = {
 		"\nThe next day you come to work, late as always, and your\n"
 		"boss tells you to leave. You ask him why, and he responds\n"
 		"with telling you he fired you yesterday...\n\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
+		"GAMEOVER\n\n"
+		"(1: restart 2: end program)\n\n",
+		2,
+		{0,-1}
 	},
 	//8
 	{
@@ -206,9 +209,10 @@ const Page gamePages[] = {
 		"\nYou interupt your boss and tell him that you have decided\n"
 		"not to work for him anymore. He ends the call.\n\n"
 		"You have been fired\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
+		"GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
 	},
 	//10
 	{
@@ -280,10 +284,10 @@ const Page gamePages[] = {
 		"President: With your childish aditude I am sure you won't\n"
 		"be missed. I didn't get a degree in elementary education.\n"
 		"Your coworkers laugh as you storm out of the room\n\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
-		
+		"GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
 	},
 	//16
 	{
@@ -333,9 +337,10 @@ const Page gamePages[] = {
                 "that puts me through so much stress on such short notice. I\n"
                 "quit. Boss: Well by the looks of it, we didn't need you in the\n"
                 "first place. And this meeting has been planned for over a week.\n\n"
-                "GAMEOVER\n\n",
-                0,
-                {}
+                "GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
         },
 	//21
         {
@@ -349,16 +354,18 @@ const Page gamePages[] = {
         {
 		"\nYou leave the room with your middle finger pointed behind you, you\n"
 		"assume you have been fired, and continue your day, jobless\n\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
+		"GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
         },
         //23
         {
 		"\nYou walk out of the room somberly yet loathingly. Stupid president.\n\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
+		"GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
         },
         //24
         {
@@ -366,9 +373,10 @@ const Page gamePages[] = {
 		"for that! President: I do not care what you think you did, this is a\n"
 		"place of business, not a backalley street, and I should expect you to\n"
 		"act like it. Leave. Now.\n\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
+		"GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
         },
         //25
         {
@@ -417,9 +425,10 @@ const Page gamePages[] = {
 		"You stop before you hit the spike strips, and you are imediatly surrounded\n"
 		"by police officers. They take you out of your car, arrest you, and you\n"
 		"go to jail...\n\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
+		"GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
 	},
 	//30
 	{
@@ -507,9 +516,10 @@ const Page gamePages[] = {
 		"\nYou act like you are pulling out your wallet, and punch the thug in the\n"
 		"face! But he recovered quickly, and you couldn't do anything from that\n"
 		"point on...\n\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
+		"GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
 	},
 	//40
 	{
@@ -655,9 +665,9 @@ const Page gamePages[] = {
 	},
 	//51	
 	{
-		"You: So it is a deal. Do I shake your hand or something? Hnikkar:\n"
+		"You:Fine, so it is a deal. Do I shake your hand or something? Hnikkar:\n"
 		"No, just sign this contract. *A contract and a fountain pen\n"
-		"materialize in front of you* You: Give me a second, I am going\n"
+		"materialize in the air front of you* You: Give me a second, I am going\n"
 		"to read this first. Hnikkarr: No need, I'll give you a summary.\n"
 		"You give me your soul, and the pendant. And I will help you kill\n"
 		"a person of your choosing. You: MY SOUL! Can't the pendant be\n"
@@ -679,18 +689,20 @@ const Page gamePages[] = {
 		"care about double crossing, either. Leave my appartment, now!\n"
 		"Hnikkar: This was like, the entire plot of your adventure...\n"
                 "Welp, guess not anymore, Hnikkar, out.\n\n"
-		"GAMEOVER\n\n",
-                0,
-                {}
+		"GAMEOVER\n\n"
+                "(1: restart 2: end program)\n\n",
+                2,
+                {0,-1}
         },
         //53
         {
 		"\nYou: I still don't trust you, demons lie, now leave my appartment\n"
-		"now! Hnikkarr: This was like, the entire plot of your adventure...\n"
+		"now! Hnikkarr: While I should applaud you for making the good samaritan\n"
+		"desision, This was like, the entire plot of your adventure...\n"
 		"Welp, guess not anymore, Hnikkar, out.\n\n"
-		"GAMEOVER\n\n",
-		0,
-		{}
+		"GAMEOVER?\n\n",
+		1,
+		{60}
         },
         //54
         {
@@ -699,17 +711,27 @@ const Page gamePages[] = {
 		"think I still have my soul. Hnikkarr: Yes, that comes after my end\n"
 		"of the deal, sadly. You: So, Let's get this guy then. Where should\n"
 		"we start? Hnikkarr: well, maybe search for clues. You: Wait, can't\n"
-		"you just teleport? Like you did to get to me? Can't you just teleport\n"
-		"to the person and kill them? Hnikkarr: I need to know what I am\n"
-		"\"teleporting\" to, moron. You: Oh, right. Clues then.\n"
+		"you just teleport to the person and kill them? Like you did to get to me?\n"
+		"Hnikkarr: I need to know what I am \"teleporting\" to, moron. You:\n"
+		"Oh, right. Clues then.\n"
 		"Where should I search?\n\n"
-		"(1: Under my pillow 2: around bed 3: somewhere else...)\n\n",
-		3,
-		{56,57,58}
+		"(1: Under my pillow 2: around my bed)\n\n",
+		2,
+		{56,57}
         },
 	//55
 	{
-		
+		"\nYou: Woah, That sounds like torture to me, i'd rather commit suicide...\n"
+		"Hnikkarr: Woah woah woah, don't make any rash desisions, yet. The sweet\n"
+		"taste of revenge will be SO much more rewarding than death, and having\n"
+		"no emotoins or feelings isn't as bad as it sounds. Just ask the last guy\n"
+		"I took the soul out of! You: Who was he? Hnikkarr: That isn't important.\n"
+		"But here's somethig that is: You wouldn't want the person that did this\n"
+		"to get away with it unscathed, would you? Plus, I will make sure they\n"
+		"suffer even more than you will without emotions...\n\n"
+		"(1: trust him (make deal) 2: don't trust him!!!!!)\n\n",
+		2,
+		{58,59}
 	},
 	//56
 	{
@@ -728,6 +750,16 @@ const Page gamePages[] = {
 
         },
         //60
+	{
+		"\nYou found the secret ending! Great job! And since I doubt anyone will find this\n\n"
+		"FUCK YOU FOR NOT TRUSTING THE DEMON!\n\n"
+		"Sorry if you are my grandparents seeing this, I am in a bad mood while writing this\n"
+		"But I doubt u will see it anyways\n"
+		"And if you aren't even related to me, you must be confused and triggered by now, so I\n"
+		"Will just give you a gameover, to rub some salt in the wound\n\n",
+		2,
+		{0,-1}
+	}
 };
 
 int doPage(int page)
@@ -769,3 +801,4 @@ int main() {
 
     return 0;
 }
+
