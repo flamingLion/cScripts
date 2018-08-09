@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ -o text2 text2.cpp
+
